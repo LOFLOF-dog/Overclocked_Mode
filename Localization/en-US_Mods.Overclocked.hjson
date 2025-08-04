@@ -1,0 +1,188 @@
+Configs: {
+	Config: {
+		DisplayName: Difficulty Configuration
+
+		Headers: {
+			BossHpMulti: Boss Health Multiplier
+			MultiplayerBossHpMulti: Multiplayer Boss Health Multiplier
+			NoNurseHealing: No Nurse Healing
+			MaxHpRework: Max Hp Rework
+			LessAccSlots: Less Accessory Slots
+		}
+
+		BossHpMultiplierON: {
+			Label: "[i:SuspiciousLookingEye] Is On?"
+			Tooltip: Multiplies HP of all bosses by choosen precentage.
+		}
+
+		BossHpMultiplier: {
+			Label: "[i:LifeCrystal] Boss HP Multiplier (in precentages)"
+			Tooltip:
+				'''
+				Multiplies Boss HP my this precent.
+				Can be anything between 1%-10000%.
+				'''
+		}
+
+		MultiplayerBossHpMultiplierON: {
+			Label: "[i:GuideVoodooDoll] Is On?"
+			Tooltip: Increase HP of all bosses by choosen precentage per each extra player in the world.
+		}
+
+		MultiplayerBossHpMultiplier: {
+			Label: "[i:LifeCrystal] Multiplayer Boss Hp Multiplier (in precentages)"
+			Tooltip:
+				'''
+				Adds choosen precent to boss HP per every player except first one in the world, example:
+				Assuming boss HP is 1000, Boss HP Multiplier is 300%, Multiplayer Boss HP Multiplier is 100%, and there's 3 players in the world.
+				(1000 * 300%) + (100% * 2) = 9000
+				'''
+		}
+
+		NoNurseHealingON: {
+			Label: "[i:NurseHat] Is On?"
+			Tooltip: Prevent healing at nurse while boss is alive.
+		}
+
+		NurseText: {
+			Label: "[i:Sign] Nurse Dialogue"
+			Tooltip: This is the dialogue nurse will say when she's unable to heal you.
+		}
+
+		MaxHealthReworkON: {
+			Label: "[i:LifeCrystal] Is On?"
+			Tooltip:
+				'''
+				Rework max HP system by adding thresholds to it.
+				You'll have to defeat certain bosses to increase you max possible HP. 
+				The point is to make player unable to get 400HP pre-boss and 500HP right after one mechanical boss and make life progression less sharp.	
+				'''
+		}
+
+		BaseMaxLife: {
+			Label: "[i:LifeCrystal] Max HP Pre-Boss"
+			Tooltip: Max HP you can get Pre-Boss
+		}
+
+		MaxLifeKingSlime: {
+			Label: "[i:KingSlimeMask] Max HP Post-King Slime"
+			Tooltip: Max HP you can get Post-King Slime
+		}
+
+		MaxLifeEoC: {
+			Label: "[i:EyeMask] Max HP Post-Eye of Cthulhu"
+			Tooltip: Max HP you can get Post-Eye of Cthulhu
+		}
+
+		MaxLifeEvilBoss: {
+			Label: "[i:EaterMask][i:BrainMask] Max HP Post-Evil Boss"
+			Tooltip: Max HP you can get Post-Evil Boss
+		}
+
+		MaxLifeSkeletron: {
+			Label: "[i:SkeletronMask] Max HP Post-Skeletron"
+			Tooltip: Max HP you can get Post-Skeletron
+		}
+
+		MaxLifeQueenBee: {
+			Label: "[i:BeeMask] Max HP Post-Queen Bee"
+			Tooltip: Max HP you can get Post-Queen Bee
+		}
+
+		MaxLifeWoF: {
+			Label: "[i:FleshMask] Max HP Post-Wall of Flesh"
+			Tooltip: Max HP you can get Post-Wall of Flesh
+		}
+
+		MaxLifeQueenSlime: {
+			Label: "[i:QueenSlimeMask] Max HP Post-Queen Slime"
+			Tooltip: Max HP you can get Post-Queen Slime
+		}
+
+		MaxLifeMech1: {
+			Label: "[i:DestroyerMask] Max HP Post-1st Mechnical boss"
+			Tooltip: Max HP you can get Post-1st Mechnical boss
+		}
+
+		MaxLifeMech2: {
+			Label: "[i:DestroyerMask][i:TwinMask] Max HP Post-2nd Mechnical boss"
+			Tooltip: Max HP you can get Post-2nd Mechnical boss
+		}
+
+		MaxLifeMech3: {
+			Label: "[i:DestroyerMask][i:TwinMask][i:SkeletronPrimeMask] Max HP Post-3rd Mechnical boss"
+			Tooltip: Max HP you can get Post-3rd Mechnical boss
+		}
+
+		MaxLifePlantera: {
+			Label: "[i:PlanteraMask] Max HP Post-Plantera"
+			Tooltip: Max HP you can get Post-Plantera
+		}
+
+		MaxLifeGolem: {
+			Label: "[i:GolemMask] Max HP Post-Golem"
+			Tooltip: Max HP you can get Post-Golem
+		}
+
+		MaxLifeFishron: {
+			Label: "[i:DukeFishronMask] Max HP Post-Fishron"
+			Tooltip: Max HP you can get Post-Fishron
+		}
+
+		MaxLifeEmpress: {
+			Label: "[i:FairyQueenMask] Max HP Post-Empress of Light"
+			Tooltip: Max HP you can get Post-Empress of Light
+		}
+
+		MaxLifeCultist: {
+			Label: "[i:BossMaskCultist] Max HP Post-Lunatic Cultist"
+			Tooltip: Max HP you can get Post-Lunatic Cultist
+		}
+
+		MaxLifeMoonLord: {
+			Label: "[i:BossMaskMoonlord] Max HP Post-Moon Lord"
+			Tooltip: Max HP you can get Post-Moon Lord
+		}
+
+		LessAccSlotsON: {
+			Label: "[i:Overclocked/Acc] Is On?"
+			Tooltip: ""
+		}
+	}
+}
+
+Items: {
+	Acc: {
+		DisplayName: Astolfo Necklace
+		Tooltip:
+			'''
+			Femboyness from that necklace empowers you with life-giving
+			Let LOFLOF code, they said, They won't do something stupid, they said
+			'''
+	}
+
+	Acc2: {
+		DisplayName: Acc2
+		Tooltip: ""
+	}
+
+	Acc3: {
+		DisplayName: Acc3
+		Tooltip: ""
+	}
+
+	Acc4: {
+		DisplayName: Acc4
+		Tooltip: ""
+	}
+
+	Acc5: {
+		DisplayName: Acc5
+		Tooltip: ""
+	}
+
+	Acc6: {
+		DisplayName: Acc6
+		Tooltip: ""
+	}
+}
