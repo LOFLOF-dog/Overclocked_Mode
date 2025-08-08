@@ -6,14 +6,18 @@ namespace Overclocked.Changes
 {
 	public class MaxLifeRework : ModPlayer
 	{
-
-        int MaxLife = ModContent.GetInstance<Config>().BaseMaxLife;
+        public int MaxLife = ModContent.GetInstance<Config>().BaseMaxLife;
         int ActualMaxLife;
         public override bool CanUseItem(Item item)
         {
-            if (ModContent.GetInstance<Config>().MaxHealthReworkON && Player.HeldItem.type == ItemID.LifeCrystal || Player.HeldItem.type == ItemID.LifeFruit)
+            if (ModContent.GetInstance<Config>().MaxHealthReworkON && Player.HeldItem.type == ItemID.LifeCrystal || ModContent.GetInstance<Config>().MaxHealthReworkON && Player.HeldItem.type == ItemID.LifeFruit)
             {
-                if (Player.statLifeMax >= MaxLife /*&& MaxLife != 500*/)
+                if (MaxLife == 500)
+                {
+                    return true;
+                }
+
+                if (Player.statLifeMax >= MaxLife)
                 {
                     return false;
                 }
@@ -27,124 +31,187 @@ namespace Overclocked.Changes
             if (NPC.downedSlimeKing)
             {   
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeKingSlime;
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().KingSlimeAnnounced)
+                {
+                    Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().KingSlimeAnnounced = true;
+                }
             }
-            if (NPC.downedBoss1 && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeEoC)
+
+            if (NPC.downedBoss1)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeEoC;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().EoCAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().EoCAnnounced = true;
                 }
             }
-            if (NPC.downedBoss2 && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeEvilBoss)
+
+            if (NPC.downedBoss2)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeEvilBoss;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().EvilBossAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().EvilBossAnnounced = true;
                 }
             }
-            if (NPC.downedBoss3 && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeSkeletron)
+
+            if (NPC.downedBoss3)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeSkeletron;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().SkeletronAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().SkeletronAnnounced = true;
                 }
             }
-            if (NPC.downedQueenBee && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeQueenBee)
+
+            if (NPC.downedQueenBee)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeQueenBee;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().QueenBeeAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().QueenBeeAnnounced = true;
                 }
             }
-            if (Main.hardMode && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeWoF)
+
+            if (Main.hardMode)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeWoF;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().WoFAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().WoFAnnounced = true;
                 }
             }
-            if (NPC.downedQueenSlime && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeQueenSlime)
-            { 
+
+            if (NPC.downedQueenSlime)
+            {
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeQueenSlime;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().QueenSlimeAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().QueenSlimeAnnounced = true;
                 }
             }
-            if (NPC.downedMechBossAny && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeMech1)
+
+            if (NPC.downedMechBossAny)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeMech1;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().Mech1Announced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().Mech1Announced = true;
                 }
             }
-            if (NPC.downedMechBoss1 && NPC.downedMechBoss2 && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeMech2 || NPC.downedMechBoss1 && NPC.downedMechBoss3 && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeMech2 || NPC.downedMechBoss3 && NPC.downedMechBoss2 && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeMech2)
+
+            if (ModContent.GetInstance<MaxLifeAnnouncementsBloker>().MechsDown == 2)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeMech2;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().Mech2Announced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().Mech2Announced = true;
                 }
             }
-            if (NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3 && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeMech3)
+
+            if (ModContent.GetInstance<MaxLifeAnnouncementsBloker>().MechsDown == 3)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeMech3;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().Mech3Announced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().Mech3Announced = true;
                 }
             }
-            if (NPC.downedFishron && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeFishron)
+
+            if (NPC.downedFishron)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeFishron;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().FishronAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().FishronAnnounced = true;
                 }
             }
-            if (NPC.downedEmpressOfLight && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeEmpress)
+
+            if (NPC.downedEmpressOfLight)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeEmpress;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().EmpressAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().EmpressAnnounced = true;
                 }
             }
-            if (NPC.downedAncientCultist && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeCultist)
+
+            if (NPC.downedAncientCultist)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeCultist;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().CultistAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().CultistAnnounced = true;
                 }
             }
-            if (NPC.downedMoonlord && MaxLife !>= ModContent.GetInstance<Config>().MaxLifeMoonLord)
+
+            if (NPC.downedMoonlord)
             { 
                 MaxLife = ModContent.GetInstance<Config>().MaxLifeMoonLord;
-                if (MaxLife > ActualMaxLife)
+                if (MaxLife > ActualMaxLife && !ModContent.GetInstance<MaxLifeAnnouncementsBloker>().MoonlordAnnounced)
                 {
-                    ActualMaxLife = MaxLife;
                     Main.NewText("[c/FF2682:You can now have " + MaxLife.ToString() + " max life.]");
+                    ActualMaxLife = MaxLife;
+                    ModContent.GetInstance<MaxLifeAnnouncementsBloker>().MoonlordAnnounced = true;
                 }
             }
         }
+    }
+    public class MaxLifeAnnouncementsBloker : ModSystem
+    {
+        public bool KingSlimeAnnounced;
+        public bool EoCAnnounced;
+        public bool EvilBossAnnounced;
+        public bool SkeletronAnnounced;
+        public bool QueenBeeAnnounced;
+        public bool WoFAnnounced;
+        public bool QueenSlimeAnnounced;
+        public bool Mech1Announced;
+        public bool Mech2Announced;
+        public bool Mech3Announced;
+        public bool PlanteraAnnounced;
+        public bool GolemAnnounced;
+        public bool FishronAnnounced;
+        public bool EmpressAnnounced;
+        public bool CultistAnnounced;
+        public bool MoonlordAnnounced;
+        public int MechsDown = 0;
+
+        public override void PostUpdateEverything()
+        {
+            if (NPC.downedMechBoss1)
+            { MechsDown =+ 1; }
+            if (NPC.downedMechBoss2)
+            { MechsDown = +1; }
+            if (NPC.downedMechBoss3)
+            { MechsDown = +1; }
+        }
+
     }
 }

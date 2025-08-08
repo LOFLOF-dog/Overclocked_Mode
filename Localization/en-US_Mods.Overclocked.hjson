@@ -185,4 +185,9 @@ Items: {
 		DisplayName: Acc6
 		Tooltip: ""
 	}
+
+	Acc7: {
+		Tooltip: ""
+		DisplayName: Acc7
+	}
 }
