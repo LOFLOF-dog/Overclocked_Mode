@@ -26,14 +26,14 @@ Configs: {
 
 		MultiplayerBossHpMultiplierON: {
 			Label: "[i:GuideVoodooDoll] Is On?"
-			Tooltip: Increase HP of all bosses by choosen precentage per each extra player in the world.
+			Tooltip: Adds choosen precentage to HP of all bosses per each extra player in the world.
 		}
 
 		MultiplayerBossHpMultiplier: {
 			Label: "[i:LifeCrystal] Multiplayer Boss Hp Multiplier (in precentages)"
 			Tooltip:
 				'''
-				Adds choosen precent to boss HP per every player except first one in the world, example:
+				Adds choosen precentage to boss HP per every player above one in the world, example:
 				Assuming boss HP is 1000, Boss HP Multiplier is 300%, Multiplayer Boss HP Multiplier is 100%, and there's 3 players in the world.
 				(1000 * 300%) + (100% * 2) = 9000
 				'''
@@ -145,49 +145,81 @@ Configs: {
 		}
 
 		LessAccSlotsON: {
-			Label: "[i:Overclocked/Acc] Is On?"
-			Tooltip: ""
+			Label: "[i:Overclocked/Acc1] Is On?"
+			Tooltip: '''
+					Decrease ammounts of accessory slots.
+					Forces player to wear accesories which does nothing otherwise they won't be able to attack and will die on one hit.
+					Player get the accesories on character creation and they're craftable from one dirt block.
+					'''
+		}
+
+		BlockedAccesorySlots: {
+			Label: "[i:Overclocked/Acc1] Amount of blocked Accesory Slots"
+			Tooltip: "The amount of accessory slots that will get blocked"
+		}
+
+		NoDemonHeart: {
+			Label: "[i:DemonHeart] No Demon Heart"
+			Tooltip: '''
+					Makes player unable to use demon heart.
+					Use to remove increase of accessory slots by one in hardmode
+					'''
 		}
 	}
 }
 
 Items: {
-	Acc: {
+	Acc1: {
 		DisplayName: Astolfo Necklace
 		Tooltip:
 			'''
-			Femboyness from that necklace empowers you with life-giving
+			Femboyness from this necklace empowers you with life and strength giving powers.
 			Let LOFLOF code, they said, They won't do something stupid, they said
 			'''
 	}
 
 	Acc2: {
-		DisplayName: Acc2
-		Tooltip: ""
+		DisplayName: Astolfo Bracelet
+		Tooltip:
+			'''
+			Femboyness from this bracelet empowers you with life and strength giving powers.
+			Let LOFLOF code, they said, They won't do something stupid, they said
+			'''
 	}
 
 	Acc3: {
-		DisplayName: Acc3
-		Tooltip: ""
+		DisplayName: Astolfo Earrings
+		Tooltip:
+			'''
+			Femboyness from these earings empowers you with life and strength giving powers.
+			Let LOFLOF code, they said, They won't do something stupid, they said
+			'''
 	}
 
 	Acc4: {
-		DisplayName: Acc4
-		Tooltip: ""
+		DisplayName: Astolfo Ring
+		Tooltip:
+			'''
+			Femboyness from this ring empowers you with life and strength giving powers.
+			Let LOFLOF code, they said, They won't do something stupid, they said
+			'''
 	}
 
 	Acc5: {
-		DisplayName: Acc5
-		Tooltip: ""
+		DisplayName: Astolfo Hairpin
+		Tooltip:
+			'''
+			Femboyness from this hairpin empowers you with life and strength giving powers.
+			Let LOFLOF code, they said, They won't do something stupid, they said
+			'''
 	}
 
 	Acc6: {
-		DisplayName: Acc6
-		Tooltip: ""
-	}
-
-	Acc7: {
-		Tooltip: ""
-		DisplayName: Acc7
+		DisplayName: Astolfo Pin
+		Tooltip:
+			'''
+			Femboyness from this pin empowers you with life and strength giving powers.
+			Let LOFLOF code, they said, They won't do something stupid, they said
+			'''
 	}
 }

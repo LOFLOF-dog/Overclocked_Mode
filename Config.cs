@@ -5,6 +5,7 @@ namespace Overclocked
 {
     public class Config : ModConfig
     {
+        // TODO: add Astolfoless textures for accs
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
         #region Boss Health Multiplier
@@ -123,6 +124,13 @@ namespace Overclocked
 
         [DefaultValue(true)]
         public bool LessAccSlotsON;
+
+        [DefaultValue(1)]
+        [Range(1, 6)]
+        public int BlockedAccesorySlots;
+
+        [DefaultValue(false)]
+        public bool NoDemonHeart;
 
         #endregion
     }

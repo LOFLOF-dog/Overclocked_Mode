@@ -4,18 +4,18 @@ using Terraria.ModLoader;
 
 namespace Overclocked.Accs
 {
-    public class Acc7 : ModItem
+    public class Acc1 : ModItem
     {
         public override void SetDefaults()
         {
-            Item.width = 20;
-            Item.height = 20;
+            Item.width = 40;
+            Item.height = 38;
             Item.accessory = true;
             Item.rare = ItemRarityID.Expert;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<Changes.AccSlots>().AccOn = true;
+            player.GetModPlayer<Changes.AccSlots>().EquipedAccs += 1;
         }
         public override bool AllowPrefix(int pre)
         {
@@ -30,6 +30,5 @@ namespace Overclocked.Accs
                     .Register();
             }
         }
-
     }
 }
