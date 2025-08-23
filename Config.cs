@@ -133,5 +133,21 @@ namespace Overclocked
         public bool NoDemonHeart;
 
         #endregion
+
+        #region Crit Taken Damage
+        [Header("CritTakedDamage")]
+
+        [DefaultValue(true)]
+        public bool CritTakenDamageON;
+
+        [DefaultValue(4)]
+        [Range(1, 100)]
+        public int CritTakenDamageChance;
+
+        [DefaultValue(200)]
+        [Range(1, 10000)]
+        public int CritTakenDamageMultiplier;
+
+        #endregion
     }
 }

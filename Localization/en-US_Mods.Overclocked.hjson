@@ -8,6 +8,7 @@ Configs: {
 			NoNurseHealing: No Nurse Healing
 			MaxHpRework: Max Hp Rework
 			LessAccSlots: Less Accessory Slots
+			CritTakedDamage: Crit Taked Damage Header
 		}
 
 		BossHpMultiplierON: {
@@ -146,24 +147,41 @@ Configs: {
 
 		LessAccSlotsON: {
 			Label: "[i:Overclocked/Acc1] Is On?"
-			Tooltip: '''
-					Decrease ammounts of accessory slots.
-					Forces player to wear accesories which does nothing otherwise they won't be able to attack and will die on one hit.
-					Player get the accesories on character creation and they're craftable from one dirt block.
-					'''
+			Tooltip:
+				'''
+				Decrease ammounts of accessory slots.
+				Forces player to wear accesories which does nothing otherwise they won't be able to attack and will die on one hit.
+				Player get the accesories on character creation and they're craftable from one dirt block.
+				'''
 		}
 
 		BlockedAccesorySlots: {
 			Label: "[i:Overclocked/Acc1] Amount of blocked Accesory Slots"
-			Tooltip: "The amount of accessory slots that will get blocked"
+			Tooltip: The amount of accessory slots that will get blocked
 		}
 
 		NoDemonHeart: {
 			Label: "[i:DemonHeart] No Demon Heart"
-			Tooltip: '''
-					Makes player unable to use demon heart.
-					Use to remove increase of accessory slots by one in hardmode
-					'''
+			Tooltip:
+				'''
+				Makes player unable to use demon heart.
+				Use to remove increase of accessory slots by one in hardmode
+				'''
+		}
+
+		CritTakenDamageMultiplier: {
+			Label: Crit Taken Damage Multiplier
+			Tooltip: ""
+		}
+
+		CritTakenDamageChance: {
+			Tooltip: ""
+			Label: Crit Taken Damage Chance
+		}
+
+		CritTakenDamageON: {
+			Tooltip: ""
+			Label: Crit Taken Damage O N
 		}
 	}
 }
