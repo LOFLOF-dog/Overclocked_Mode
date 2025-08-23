@@ -43,6 +43,21 @@ namespace Overclocked
 
         #endregion
 
+        #region RegenBlocker
+        [Header("RegenBlocker")]
+
+        [DefaultValue(true)]
+        public bool RegenBlockerON;
+
+        [DefaultValue(true)]
+        public bool RegenBlockerOnlyWhenBoss;
+
+        [DefaultValue(5)]
+        [Range(1, 3600)]
+        public int RegenBlockedTime;
+
+        #endregion
+
         #region Max Health Rework
         [Header("MaxHpRework")]
 

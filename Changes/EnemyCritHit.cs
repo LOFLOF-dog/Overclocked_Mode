@@ -8,8 +8,6 @@ namespace Overclocked.Changes
         public override void ModifyHurt(ref Player.HurtModifiers modifiers)
         {
             float CritChance = ModContent.GetInstance<Config>().CritTakenDamageChance;
-            Main.NewText(Main.rand.NextFloat());
-            Main.NewText(ModContent.GetInstance<Config>().CritTakenDamageChance / 100);
             if (Main.rand.NextFloat() < CritChance / 100 && ModContent.GetInstance<Config>().CritTakenDamageON)
             {
 

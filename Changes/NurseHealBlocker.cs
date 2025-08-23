@@ -15,7 +15,7 @@ namespace Overclocked.Changes
                 if (npc.type == NPCID.Nurse)
                 {
                     // Change the chat message depending on whether a boss is alive
-                    if (IsBossAlive())
+                    if (ModContent.GetInstance<MyModSystem>().IsBossAlive())
                     {
                         chat = ModContent.GetInstance<Config>().NurseText;
                     }
@@ -37,18 +37,5 @@ namespace Overclocked.Changes
             }
             return true;
         }*/
-
-        private bool IsBossAlive()
-        {
-            // Check if any NPCs currently active are bosses
-            for (int i = 0; i < Main.npc.Length; i++)
-            {
-                if (Main.npc[i].active && Main.npc[i].boss)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
     }
 }

@@ -9,6 +9,7 @@ Configs: {
 			MaxHpRework: Max Hp Rework
 			LessAccSlots: Less Accessory Slots
 			CritTakedDamage: Crit Taked Damage Header
+			RegenBlocker: Regen Blocker Header
 		}
 
 		BossHpMultiplierON: {
@@ -183,6 +184,21 @@ Configs: {
 			Tooltip: ""
 			Label: Crit Taken Damage O N
 		}
+
+		RegenBlockerON: {
+			Label: Regen Blocker O N
+			Tooltip: ""
+		}
+
+		RegenBlockerOnlyWhenBoss: {
+			Label: Regen Blocker Only When Boss
+			Tooltip: ""
+		}
+
+		RegenBlockedTime: {
+			Label: Regen Blocked Time
+			Tooltip: ""
+		}
 	}
 }
 
@@ -239,5 +255,12 @@ Items: {
 			Femboyness from this pin empowers you with life and strength giving powers.
 			Let LOFLOF code, they said, They won't do something stupid, they said
 			'''
+	}
+}
+
+Buffs: {
+	BlockedRegenDebuff: {
+		Description: Mods.Overclocked.Buffs.BlockedRegenDebuff.Description
+		DisplayName: Blocked Regen Debuff
 	}
 }
