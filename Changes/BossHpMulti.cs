@@ -46,6 +46,9 @@ namespace Overclocked.Changes
             float OverclockedMultiplayerBossHpMulti = ModContent.GetInstance<Config>().MultiplayerBossHpMultiplier / 100;
             float FinalMultiplayerMulti = (OverclockedMultiplayerBossHpMulti * (playerCount - 1) ) - MultiplayerFactor + 1;
 
+            if (!ModContent.GetInstance<Config>().BossHpMultiplierON) { OverclockedBossHpMulti = 1; }
+            if (!ModContent.GetInstance<Config>().MultiplayerBossHpMultiplierON) { FinalMultiplayerMulti = 1; }
+
             if (npc.boss)
             {
                 float BossHp = npc.lifeMax * OverclockedBossHpMulti * FinalMultiplayerMulti;

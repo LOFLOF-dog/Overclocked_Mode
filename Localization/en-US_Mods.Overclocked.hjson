@@ -10,6 +10,9 @@ Configs: {
 			LessAccSlots: Less Accessory Slots
 			CritTakedDamage: Crit Taked Damage Header
 			RegenBlocker: Regen Blocker Header
+			EnemiesDmgMulti: Enemies Dmg Multi Header
+			EnemiesHpMulti: Enemies Hp Multi Header
+			BossDmgMulti: Boss Dmg Multi Header
 		}
 
 		BossHpMultiplierON: {
@@ -197,6 +200,51 @@ Configs: {
 
 		RegenBlockedTime: {
 			Label: Regen Blocked Time
+			Tooltip: ""
+		}
+
+		EnemiesDmgMultiplierON: {
+			Label: Enemies Dmg Multiplier O N
+			Tooltip: ""
+		}
+
+		EnemiesDmgMultiplierSTACK: {
+			Label: Enemies Dmg Multiplier S T A C K
+			Tooltip: ""
+		}
+
+		EnemiesDmgMultiplier: {
+			Label: Enemies Dmg Multiplier
+			Tooltip: ""
+		}
+
+		EnemiesHpMultiplierON: {
+			Label: Enemies Hp Multiplier O N
+			Tooltip: ""
+		}
+
+		EnemiesHpMultiplierSTACK: {
+			Label: Enemies Hp Multiplier S T A C K
+			Tooltip: ""
+		}
+
+		EnemiesHpMultiplier: {
+			Label: Enemies Hp Multiplier
+			Tooltip: ""
+		}
+
+		BossDmgMultiplierON: {
+			Label: Boss Dmg Multiplier O N
+			Tooltip: ""
+		}
+
+		BossDmgMultiplierMode: {
+			Label: Boss Dmg Multiplier Mode
+			Tooltip: ""
+		}
+
+		BossDmgMultiplier: {
+			Label: Boss Dmg Multiplier
 			Tooltip: ""
 		}
 	}

@@ -8,6 +8,47 @@ namespace Overclocked
         // TODO: add Astolfoless textures for accs
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
+        #region Enemies Damage Multiplier
+        [Header("EnemiesDmgMulti")]
+
+        [DefaultValue(false)]
+        public bool EnemiesDmgMultiplierON;
+
+        [DefaultValue(false)]
+        public bool EnemiesDmgMultiplierSTACK;
+
+        [DefaultValue(100)]
+        [Range(1, 10000)]
+        public int EnemiesDmgMultiplier;
+        #endregion
+
+        #region Enemies Health Multiplier
+        [Header("EnemiesHpMulti")]
+
+        [DefaultValue(false)]
+        public bool EnemiesHpMultiplierON;
+
+        [DefaultValue(false)]
+        public bool EnemiesHpMultiplierSTACK;
+
+        [DefaultValue(100)]
+        [Range(1, 10000)]
+        public int EnemiesHpMultiplier;
+
+        #endregion
+
+        #region Boss Damage Multiplier
+        [Header("BossDmgMulti")]
+
+        [DefaultValue(false)]
+        public bool BossDmgMultiplierON;
+
+        [DefaultValue(100)]
+        [Range(1, 10000)]
+        public int BossDmgMultiplier;
+
+        #endregion
+
         #region Boss Health Multiplier
         [Header("BossHpMulti")]
 
