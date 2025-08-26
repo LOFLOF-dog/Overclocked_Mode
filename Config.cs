@@ -99,6 +99,21 @@ namespace Overclocked
 
         #endregion
 
+        #region PickupNerf
+        [Header("PickupNerf")]
+
+        [DefaultValue(true)]
+        public bool PickupNerfON;
+
+        [DefaultValue(10)]
+        [Range(-10000, 10000)]
+        public int HPPickupNerf;
+
+        [DefaultValue(50)]
+        [Range(-10000, 10000)]
+        public int ManaPickupNerf;
+        #endregion
+
         #region Max Health Rework
         [Header("MaxHpRework")]
 

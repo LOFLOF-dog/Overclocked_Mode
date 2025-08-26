@@ -13,6 +13,7 @@ Configs: {
 			EnemiesDmgMulti: Enemies Dmg Multi Header
 			EnemiesHpMulti: Enemies Hp Multi Header
 			BossDmgMulti: Boss Dmg Multi Header
+			PickupNerf: Pickup Nerf Header
 		}
 
 		BossHpMultiplierON: {
@@ -245,6 +246,21 @@ Configs: {
 
 		BossDmgMultiplier: {
 			Label: Boss Dmg Multiplier
+			Tooltip: ""
+		}
+
+		PickupNerfON: {
+			Label: Pickup Nerf O N
+			Tooltip: ""
+		}
+
+		HPPickupNerf: {
+			Label: H P Pickup Nerf
+			Tooltip: ""
+		}
+
+		ManaPickupNerf: {
+			Label: Mana Pickup Nerf
 			Tooltip: ""
 		}
 	}
