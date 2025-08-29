@@ -14,6 +14,8 @@ Configs: {
 			EnemiesHpMulti: Enemies Hp Multi Header
 			BossDmgMulti: Boss Dmg Multi Header
 			PickupNerf: Pickup Nerf Header
+			TakenHitLimit: Taken Hit Limit Header
+			TakenHitDmgScaller: Taken Hit Dmg Scaller Header
 		}
 
 		BossHpMultiplierON: {
@@ -261,6 +263,66 @@ Configs: {
 
 		ManaPickupNerf: {
 			Label: Mana Pickup Nerf
+			Tooltip: ""
+		}
+
+		ShowHitNumber: {
+			Label: Show Hit Number
+			Tooltip: ""
+		}
+
+		TakenHitLimitON: {
+			Label: Taken Hit Limit O N
+			Tooltip: ""
+		}
+
+		TakenHitLimitOnlyWhenBoss: {
+			Label: Taken Hit Limit Only When Boss
+			Tooltip: ""
+		}
+
+		TakenHitLimit: {
+			Label: Taken Hit Limit
+			Tooltip: ""
+		}
+
+		ShowHitNumber1: {
+			Label: Show Hit Number1
+			Tooltip: ""
+		}
+
+		TakenHitDmgScallerON: {
+			Label: Taken Hit Dmg Scaller O N
+			Tooltip: ""
+		}
+
+		TakenHitDmgScallerOnlyWhenBoss: {
+			Label: Taken Hit Dmg Scaller Only When Boss
+			Tooltip: ""
+		}
+
+		ShowHitNumber2: {
+			Label: Show Hit Number2
+			Tooltip: ""
+		}
+
+		TakenHitScal: {
+			Label: Taken Hit Scal
+			Tooltip: ""
+		}
+
+		ShowHitNumberAfterFIght: {
+			Tooltip: ""
+			Label: Show Hit Number After F Ight
+		}
+
+		ShowHitNumberAlways: {
+			Label: Show Hit Number Always
+			Tooltip: ""
+		}
+
+		ShowHitNumberAfterFight: {
+			Label: Show Hit Number After Fight
 			Tooltip: ""
 		}
 	}

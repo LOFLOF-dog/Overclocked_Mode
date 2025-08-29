@@ -7,6 +7,10 @@ namespace Overclocked
     {
         // TODO: add Astolfoless textures for accs
         public override ConfigScope Mode => ConfigScope.ServerSide;
+        public bool ShowHitNumberAfterFight;
+        public bool ShowHitNumber;
+        public bool ShowHitNumberAlways;
+
 
         #region Enemies Damage Multiplier
         [Header("EnemiesDmgMulti")]
@@ -84,7 +88,7 @@ namespace Overclocked
 
         #endregion
 
-        #region RegenBlocker
+        #region Regen Blocker
         [Header("RegenBlocker")]
 
         [DefaultValue(true)]
@@ -99,7 +103,7 @@ namespace Overclocked
 
         #endregion
 
-        #region PickupNerf
+        #region Pickup Nerf
         [Header("PickupNerf")]
 
         [DefaultValue(true)]
@@ -219,6 +223,34 @@ namespace Overclocked
         [Range(1, 10000)]
         public int CritTakenDamageMultiplier;
 
+        #endregion
+
+        #region Taken Hit Limit
+        [Header("TakenHitLimit")]
+
+        [DefaultValue(true)]
+        public bool TakenHitLimitON;
+
+        [DefaultValue(true)]
+        public bool TakenHitLimitOnlyWhenBoss;
+
+        [DefaultValue(25)]
+        [Range(1, 10000)]
+        public int TakenHitLimit;
+        #endregion
+
+        #region Taken Hit Dmg Scaller
+        [Header("TakenHitDmgScaller")]
+
+        [DefaultValue(true)]
+        public bool TakenHitDmgScallerON;
+
+        [DefaultValue(true)]
+        public bool TakenHitDmgScallerOnlyWhenBoss;
+
+        [DefaultValue(5)]
+        [Range(1, 10000)]
+        public int TakenHitScal;
         #endregion
     }
 }
