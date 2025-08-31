@@ -16,6 +16,7 @@ Configs: {
 			PickupNerf: Pickup Nerf Header
 			TakenHitLimit: Taken Hit Limit Header
 			TakenHitDmgScaller: Taken Hit Dmg Scaller Header
+			Reworks: Reworks Header
 		}
 
 		BossHpMultiplierON: {
@@ -323,6 +324,26 @@ Configs: {
 
 		ShowHitNumberAfterFight: {
 			Label: Show Hit Number After Fight
+			Tooltip: ""
+		}
+
+		EvilOresRework: {
+			Label: Evil Ores Rework
+			Tooltip: ""
+		}
+
+		EvilBossMaterialsRework: {
+			Label: Evil Boss Materials Rework
+			Tooltip: ""
+		}
+
+		BundleRework: {
+			Label: Bundle Rework
+			Tooltip: ""
+		}
+
+		MechsRework: {
+			Label: Mechs Rework
 			Tooltip: ""
 		}
 	}
