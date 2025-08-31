@@ -16,6 +16,7 @@ Configs: {
 			PickupNerf: Pickup Nerf Header
 			TakenHitLimit: Taken Hit Limit Header
 			TakenHitDmgScaller: Taken Hit Dmg Scaller Header
+			BossRegen: Boss Regen Header
 		}
 
 		BossHpMultiplierON: {
@@ -325,6 +326,31 @@ Configs: {
 			Label: Show Hit Number After Fight
 			Tooltip: ""
 		}
+
+		BossRegenON: {
+			Label: Boss Regen O N
+			Tooltip: ""
+		}
+
+		BossRegenHealPercent: {
+			Label: Boss Regen Heal Percent
+			Tooltip: ""
+		}
+
+		BossRegenTickDuration: {
+			Label: Boss Regen Tick Duration
+			Tooltip: ""
+		}
+
+		BossRegenNoHitActivationTime: {
+			Label: Boss Regen No Hit Activation Time
+			Tooltip: ""
+		}
+
+		BossRegenHealPerSecond: {
+			Label: Boss Regen Heal Per Second
+			Tooltip: ""
+		}
 	}
 }
 
@@ -388,5 +414,10 @@ Buffs: {
 	BlockedRegenDebuff: {
 		Description: Mods.Overclocked.Buffs.BlockedRegenDebuff.Description
 		DisplayName: Blocked Regen Debuff
+	}
+
+	BossRegenBuff: {
+		DisplayName: Boss Regen Buff
+		Description: Mods.Overclocked.Buffs.BossRegenBuff.Description
 	}
 }

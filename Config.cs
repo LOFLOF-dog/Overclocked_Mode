@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using Overclocked.Changes;
+using System.ComponentModel;
+using Terraria;
 using Terraria.ModLoader.Config;
 
 namespace Overclocked
@@ -252,5 +254,31 @@ namespace Overclocked
         [Range(1, 10000)]
         public int TakenHitScal;
         #endregion
+
+        #region Boss regeneration
+        [Header("BossRegen")]
+
+        [DefaultValue(true)]
+        public bool BossRegenON;
+
+        [DefaultValue(1)]
+        [Range(1, 100)]
+        public int BossRegenHealPercent;
+
+        [DefaultValue(10)]
+        [Range(1, 3600)]
+        public int BossRegenNoHitActivationTime;
+
+        [DefaultValue(10)]
+        [Range(1, 3600)]
+        public int BossRegenHealPerSecond;
+        #endregion
+
+        public override void OnChanged()
+        {
+            BossRegen.HealPercent = BossRegenHealPercent;
+            BossRegen.NoHitActivationTime = BossRegenNoHitActivationTime;
+            BossRegen.HealActivationTime = BossRegenHealPerSecond;
+        }
     }
 }
