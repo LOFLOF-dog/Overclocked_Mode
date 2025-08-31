@@ -6,17 +6,17 @@ namespace Overclocked.Reworks
 {
     public class EvilOreRework : GlobalTile
     {
-        public override void SetDefaults()
+        public override bool CanKillTile(int i, int j, int type, ref bool blockDamaged)
         {
-            if (Main.tileSolid[TileID.Demonite])
+            if (type == TileID.Demonite && ModContent.GetInstance<Config>().EvilOresReworkON || type == TileID.Crimtane && ModContent.GetInstance<Config>().EvilOresReworkON)
             {
-                Main.tileHammer[TileID.Demonite] = false; // Prevent hammering
-                Main.tilePick[TileID.Demonite] = true;     // Allow pickaxe mining
+                Player player = Main.LocalPlayer;
+                if (player.HeldItem.pick < 65) // Example threshold
+                {
+                    return false; // Prevent mining
+                }
             }
-
-            // Change required pickaxe power
-            TileID.Sets.Ore[TileID.Demonite] = true;
-            TileID.Sets.MinimumPickaxePower[TileID.Demonite] = 65; // Example: require 65% pickaxe power
+            return base.CanKillTile(i, j, type, ref blockDamaged);
         }
     }
 }

@@ -15,13 +15,13 @@ namespace Overclocked
         [Header("Reworks")]
 
         [DefaultValue(true)]
-        public bool EvilOresRework;
+        public bool EvilOresReworkON;
         [DefaultValue(true)]
-        public bool EvilBossMaterialsRework;
+        public bool EvilBossMaterialsReworkON;
         [DefaultValue(true)]
-        public bool BundleRework;
+        public bool BundleReworkON;
         [DefaultValue(true)]
-        public bool MechsRework;
+        public bool MechsReworkON;
 
         #endregion
 
