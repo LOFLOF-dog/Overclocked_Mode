@@ -16,6 +16,11 @@ Configs: {
 			PickupNerf: Pickup Nerf Header
 			TakenHitLimit: Taken Hit Limit Header
 			TakenHitDmgScaller: Taken Hit Dmg Scaller Header
+<<<<<<< Updated upstream
+=======
+			Reworks: Reworks Header
+			DmgCombo: Dmg Combo Header
+>>>>>>> Stashed changes
 		}
 
 		BossHpMultiplierON: {
@@ -325,6 +330,99 @@ Configs: {
 			Label: Show Hit Number After Fight
 			Tooltip: ""
 		}
+<<<<<<< Updated upstream
+=======
+
+		EvilOresRework: {
+			Label: Evil Ores Rework
+			Tooltip: ""
+		}
+
+		EvilBossMaterialsRework: {
+			Label: Evil Boss Materials Rework
+			Tooltip: ""
+		}
+
+		BundleRework: {
+			Label: Bundle Rework
+			Tooltip: ""
+		}
+
+		MechsRework: {
+			Label: Mechs Rework
+			Tooltip: ""
+		}
+
+		EvilOresReworkON: {
+			Label: Evil Ores Rework O N
+			Tooltip: ""
+		}
+
+		EvilBossMaterialsReworkON: {
+			Label: Evil Boss Materials Rework O N
+			Tooltip: ""
+		}
+
+		BundleReworkON: {
+			Label: Bundle Rework O N
+			Tooltip: ""
+		}
+
+		MechsReworkON: {
+			Label: Mechs Rework O N
+			Tooltip: ""
+		}
+
+		DmgComboON: {
+			Label: Dmg Combo O N
+			Tooltip: ""
+		}
+
+		DmgComboIncrease: {
+			Label: Dmg Combo Increase
+			Tooltip: ""
+		}
+
+		DmgComboDecrease: {
+			Label: Dmg Combo Decrease
+			Tooltip: ""
+		}
+
+		DmgComboWaitTime: {
+			Label: Dmg Combo Wait Time
+			Tooltip: ""
+		}
+
+		DmgComboDispower: {
+			Label: Dmg Combo Dispower
+			Tooltip: ""
+		}
+
+		DmgComboCap: {
+			Label: Dmg Combo Cap
+			Tooltip: ""
+		}
+
+		DmgComboCapAtOne: {
+			Label: Dmg Combo Cap At One
+			Tooltip: ""
+		}
+
+		DmgComboShow: {
+			Label: Dmg Combo Show
+			Tooltip: ""
+		}
+
+		DmgComboCapUp: {
+			Label: Dmg Combo Cap Up
+			Tooltip: ""
+		}
+
+		DmgComboCapDown: {
+			Label: Dmg Combo Cap Down
+			Tooltip: ""
+		}
+>>>>>>> Stashed changes
 	}
 }
 

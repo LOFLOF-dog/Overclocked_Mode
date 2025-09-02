@@ -225,6 +225,47 @@ namespace Overclocked
 
         #endregion
 
+        #region Dmg Combo
+        //TODO: force reload to DmgComboCapUp, probably DmgComboCapDown and maybe some more variables
+        [Header("DmgCombo")]
+
+        [DefaultValue(true)]
+        public bool DmgComboON;
+
+        [DefaultValue(true)]
+        public bool DmgComboShow;
+
+        [DefaultValue(20)]
+        [Range(1, 10000)]
+        [ReloadRequired]
+        public int DmgComboIncrease;
+
+        [DefaultValue(7)]
+        [Range(0, 10000)]
+        [ReloadRequired]
+        public int DmgComboDecrease;
+
+        [DefaultValue(2)]
+        [Range(0, 10000)]
+        public int DmgComboWaitTime;
+
+        [DefaultValue(2)]
+        [Range(0, 20f)]
+        [Increment(0.1f)]
+        public float DmgComboDispower;
+
+        [DefaultValue(0)]
+        [Range(0, 10000)]
+        [ReloadRequired]
+        public int DmgComboCapUp;
+
+
+        [DefaultValue(100)]
+        [Range(0, 10000)]
+        [ReloadRequired]
+        public int DmgComboCapDown;
+        #endregion
+
         #region Taken Hit Limit
         [Header("TakenHitLimit")]
 
