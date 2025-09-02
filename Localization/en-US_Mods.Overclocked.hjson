@@ -17,6 +17,8 @@ Configs: {
 			TakenHitLimit: Taken Hit Limit Header
 			TakenHitDmgScaller: Taken Hit Dmg Scaller Header
 			BossRegen: Boss Regen Header
+			Reworks: Reworks Header
+			DmgCombo: Dmg Combo Header
 		}
 
 		BossHpMultiplierON: {
@@ -349,6 +351,71 @@ Configs: {
 
 		BossRegenHealPerSecond: {
 			Label: Boss Regen Heal Per Second
+			Tooltip: ""
+		}
+
+		EvilBossMaterialsReworkON: {
+			Label: Evil Boss Materials Rework O N
+			Tooltip: ""
+		}
+
+		BundleReworkON: {
+			Label: Bundle Rework O N
+			Tooltip: ""
+		}
+
+		MechsReworkON: {
+			Label: Mechs Rework O N
+			Tooltip: ""
+		}
+
+		DmgComboON: {
+			Label: Dmg Combo O N
+			Tooltip: ""
+		}
+
+		DmgComboIncrease: {
+			Label: Dmg Combo Increase
+			Tooltip: ""
+		}
+
+		DmgComboDecrease: {
+			Label: Dmg Combo Decrease
+			Tooltip: ""
+		}
+
+		DmgComboWaitTime: {
+			Label: Dmg Combo Wait Time
+			Tooltip: ""
+		}
+
+		DmgComboDispower: {
+			Label: Dmg Combo Dispower
+			Tooltip: ""
+		}
+
+		DmgComboCap: {
+			Label: Dmg Combo Cap
+			Tooltip: ""
+		}
+
+		DmgComboCapAtOne: {
+			Label: Dmg Combo Cap At One
+			Tooltip: ""
+		}
+
+		DmgComboShow: {
+			Label: Dmg Combo Show
+			Tooltip: ""
+		}
+
+		DmgComboCapUp: {
+			Label: Dmg Combo Cap Up
+			Tooltip: ""
+		}
+
+		DmgComboCapDown: {
+			Label: Dmg Combo Cap Down
 			Tooltip: ""
 		}
 	}
