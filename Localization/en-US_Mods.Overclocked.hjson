@@ -346,6 +346,26 @@ Configs: {
 			Label: Mechs Rework
 			Tooltip: ""
 		}
+
+		MechsReworkON: {
+			Tooltip: ""
+			Label: Mechs Rework O N
+		}
+
+		BundleReworkON: {
+			Tooltip: ""
+			Label: Bundle Rework O N
+		}
+
+		EvilBossMaterialsReworkON: {
+			Tooltip: ""
+			Label: Evil Boss Materials Rework O N
+		}
+
+		EvilOresReworkON: {
+			Tooltip: ""
+			Label: Evil Ores Rework O N
+		}
 	}
 }
 
