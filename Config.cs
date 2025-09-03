@@ -310,16 +310,16 @@ namespace Overclocked
         [Range(1, 3600)]
         public int BossRegenNoHitActivationTime;
 
-        [DefaultValue(10)]
-        [Range(1, 3600)]
-        public int BossRegenHealPerSecond;
+        [DefaultValue(600)]
+        [Range(1, 216000)]
+        public int BossRegenHealActivationTime;
         #endregion
 
         public override void OnChanged()
         {
             BossRegen.HealPercent = BossRegenHealPercent;
             BossRegen.NoHitActivationTime = BossRegenNoHitActivationTime;
-            BossRegen.HealActivationTime = BossRegenHealPerSecond;
+            BossRegen.HealActivationTime = BossRegenHealActivationTime;
         }
     }
 }
