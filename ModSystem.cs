@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Overclocked.Changes;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -17,6 +19,25 @@ namespace Overclocked
                 }
             }
             return false;
+        }
+        public override void PostDrawInterface(SpriteBatch spriteBatch)
+        {
+            if (ModContent.GetInstance<Config>().DmgComboShow && ModContent.GetInstance<Config>().DmgComboON)
+            {
+                Player player = Main.LocalPlayer;
+                var modPlayer = player.GetModPlayer<DmgCombo>();
+
+                // Convert world position to screen position
+                Vector2 screenPos = player.Center - Main.screenPosition;
+                screenPos.Y += 3 * Main.GameViewMatrix.Zoom.Y * 5; // Offset below the player3
+                screenPos.X -= 75;
+
+                string text = modPlayer.DamageCombo.ToString("F2"); // Format to 2 decimal places
+                Color textColor = Color.White;
+
+                // Draw the text
+                Utils.DrawBorderString(spriteBatch, text, screenPos, textColor);
+            }
         }
     }
     public class TakenHitsCount : ModPlayer
