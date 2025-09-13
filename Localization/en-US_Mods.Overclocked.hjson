@@ -19,6 +19,7 @@ Configs: {
 			BossRegen: Boss Regen Header
 			Reworks: Reworks Header
 			DmgCombo: Dmg Combo Header
+			EvilMovement: Evil Movement Header
 		}
 
 		BossHpMultiplierON: {
@@ -441,6 +442,26 @@ Configs: {
 
 		DmgComboCapDown: {
 			Label: Dmg Combo Cap Down
+			Tooltip: ""
+		}
+
+		BossRegenHealActivationTime: {
+			Label: Boss Regen Heal Activation Time
+			Tooltip: ""
+		}
+
+		EvilMovementON: {
+			Label: Evil Movement O N
+			Tooltip: ""
+		}
+
+		EvilMovementActivationPeriod: {
+			Label: Evil Movement Activation Period
+			Tooltip: ""
+		}
+
+		EvilMovementRandomSpread: {
+			Label: Evil Movement Random Spread
 			Tooltip: ""
 		}
 	}

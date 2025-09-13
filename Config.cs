@@ -315,11 +315,29 @@ namespace Overclocked
         public int BossRegenHealActivationTime;
         #endregion
 
+        #region Evil Movement
+        [Header("EvilMovement")]
+
+        [DefaultValue(false)]
+        public bool EvilMovementON;
+
+        [DefaultValue(600)]
+        [Range(1, 216000)]
+        public int EvilMovementActivationPeriod;
+
+        [DefaultValue(0)]
+        [Range(0, 216000)]
+        public int EvilMovementRandomSpread;
+        #endregion
+
         public override void OnChanged()
         {
             BossRegen.HealPercent = BossRegenHealPercent;
             BossRegen.NoHitActivationTime = BossRegenNoHitActivationTime;
             BossRegen.HealActivationTime = BossRegenHealActivationTime;
+            //
+            EvilMovement.ActivationPeriod = EvilMovementActivationPeriod;
+            EvilMovement.RandomSpread = EvilMovementRandomSpread;
         }
     }
 }
