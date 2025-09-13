@@ -56,8 +56,8 @@ namespace Overclocked.Changes
             get => healActivationTime;
             set
             { 
-                if (value > 0 && value <= 3600)
-                    healActivationTime = value * 60 * 2; 
+                if (value > 0 && value <= 216000)
+                    healActivationTime = value * 2; 
             } 
         }
         static public int NoHitActivationTime 

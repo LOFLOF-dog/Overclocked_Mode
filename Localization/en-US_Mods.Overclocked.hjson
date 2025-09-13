@@ -418,6 +418,21 @@ Configs: {
 			Label: Dmg Combo Cap Down
 			Tooltip: ""
 		}
+
+		HyperModeON: {
+			Label: Hyper Mode O N
+			Tooltip: ""
+		}
+
+		HyperModeMulti: {
+			Label: Hyper Mode Multi
+			Tooltip: ""
+		}
+
+		BossRegenHealActivationTime: {
+			Label: Boss Regen Heal Activation Time
+			Tooltip: ""
+		}
 	}
 }
 
