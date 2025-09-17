@@ -19,7 +19,6 @@ Configs: {
 			BossRegen: Boss Regen Header
 			Reworks: Reworks Header
 			DmgCombo: Dmg Combo Header
-			Reworks: Reworks Header
 		}
 
 		BossHpMultiplierON: {
