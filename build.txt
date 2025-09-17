@@ -1,3 +1,4 @@
 displayName = Overclocked difficulty
 author = ŁOFŁOF
 version = 0.1
+modReferences = HyperMode

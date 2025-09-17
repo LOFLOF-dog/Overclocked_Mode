@@ -1,6 +1,7 @@
 ﻿using Overclocked.Changes;
 using System.ComponentModel;
 using Terraria;
+using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 
 namespace Overclocked
@@ -331,11 +332,34 @@ namespace Overclocked
         public int BossRegenHealActivationTime;
         #endregion
 
+        #region Hyper mode
+        [Header("BossRegen")]
+
+        [DefaultValue(true)]
+        public bool HyperModeON;
+
+        [DefaultValue(130)]
+        [Range(100, 1000)]
+        public int HyperModeMulti;
+        #endregion
+
         public override void OnChanged()
         {
             BossRegen.HealPercent = BossRegenHealPercent;
             BossRegen.NoHitActivationTime = BossRegenNoHitActivationTime;
             BossRegen.HealActivationTime = BossRegenHealActivationTime;
+
+            /*Mod HyperMode = ModLoader.GetMod("HyperMod");
+            Type configType = HyperMode.Code.GetType("HyperMode.HyperConfig");
+            object configInstance = configType.GetProperty("Instance").GetValue(null);
+            bool someValue = (bool)configType.GetProperty("SomeConfigProperty").GetValue(configInstance);
+
+            if (ModLoader.TryGetMod("HyperConfig", out Mod HyperMode) && HyperMode.TryFind<ModConfig>("HyperConfig", out ModConfig HyperConfig) && HyperConfig.GetProperty("HyperConfig", out ModConfig HyperConfig))
+            {
+                HyperMode.
+                if (ModLoader.TryGetMod("HyperConfig", out ModConfig HyperMode) && HyperMode.TryFind<ModConfig>("HyperConfig", out ModConfig HyperConfig))
+                { }
+            }*/
         }
     }
 }

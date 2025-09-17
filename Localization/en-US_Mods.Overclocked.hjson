@@ -394,31 +394,6 @@ Configs: {
 			Tooltip: ""
 		}
 
-		EvilOresRework: {
-			Label: Evil Ores Rework
-			Tooltip: ""
-		}
-
-		EvilBossMaterialsRework: {
-			Label: Evil Boss Materials Rework
-			Tooltip: ""
-		}
-
-		BundleRework: {
-			Label: Bundle Rework
-			Tooltip: ""
-		}
-
-		MechsRework: {
-			Label: Mechs Rework
-			Tooltip: ""
-		}
-
-		EvilOresReworkON: {
-			Label: Evil Ores Rework O N
-			Tooltip: ""
-		}
-
 		EvilBossMaterialsReworkON: {
 			Label: Evil Boss Materials Rework O N
 			Tooltip: ""
@@ -481,6 +456,21 @@ Configs: {
 
 		DmgComboCapDown: {
 			Label: Dmg Combo Cap Down
+			Tooltip: ""
+		}
+
+		HyperModeON: {
+			Label: Hyper Mode O N
+			Tooltip: ""
+		}
+
+		HyperModeMulti: {
+			Label: Hyper Mode Multi
+			Tooltip: ""
+		}
+
+		BossRegenHealActivationTime: {
+			Label: Boss Regen Heal Activation Time
 			Tooltip: ""
 		}
 	}
