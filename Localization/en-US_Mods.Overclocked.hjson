@@ -329,6 +329,46 @@ Configs: {
 			Tooltip: ""
 		}
 
+		EvilOresRework: {
+			Label: Evil Ores Rework
+			Tooltip: ""
+		}
+
+		EvilBossMaterialsRework: {
+			Label: Evil Boss Materials Rework
+			Tooltip: ""
+		}
+
+		BundleRework: {
+			Label: Bundle Rework
+			Tooltip: ""
+		}
+
+		MechsRework: {
+			Label: Mechs Rework
+			Tooltip: ""
+		}
+
+		MechsReworkON: {
+			Tooltip: ""
+			Label: Mechs Rework O N
+		}
+
+		BundleReworkON: {
+			Tooltip: ""
+			Label: Bundle Rework O N
+		}
+
+		EvilBossMaterialsReworkON: {
+			Tooltip: ""
+			Label: Evil Boss Materials Rework O N
+		}
+
+		EvilOresReworkON: {
+			Tooltip: ""
+			Label: Evil Ores Rework O N
+		}
+
 		BossRegenON: {
 			Label: Boss Regen O N
 			Tooltip: ""

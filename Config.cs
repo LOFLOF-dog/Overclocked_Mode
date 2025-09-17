@@ -13,6 +13,22 @@ namespace Overclocked
         public bool ShowHitNumber;
         public bool ShowHitNumberAlways;
 
+        #region Reworks
+        [Header("Reworks")]
+
+        [DefaultValue(true)]
+        public bool EvilOresReworkON;
+
+        [DefaultValue(true)]
+        public bool EvilBossMaterialsReworkON;
+
+        [DefaultValue(true)]
+        public bool BundleReworkON;
+
+        [DefaultValue(true)]
+        public bool MechsReworkON;
+
+        #endregion
 
         #region Enemies Damage Multiplier
         [Header("EnemiesDmgMulti")]
