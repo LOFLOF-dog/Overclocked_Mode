@@ -16,10 +16,13 @@ namespace Overclocked
 
         [DefaultValue(true)]
         public bool EvilOresReworkON;
+
         [DefaultValue(true)]
         public bool EvilBossMaterialsReworkON;
+
         [DefaultValue(true)]
         public bool BundleReworkON;
+
         [DefaultValue(true)]
         public bool MechsReworkON;
 

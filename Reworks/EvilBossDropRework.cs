@@ -13,15 +13,52 @@ namespace Overclocked.Reworks
     {
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
-            if (npc.type == NPCID.Creeper)
+            if (!ModContent.GetInstance<Config>().EvilBossMaterialsReworkON) { return; }
+            //
+            switch (npc.type) 
             {
-                npcLoot.RemoveWhere(rule => true);
+                case NPCID.Creeper:
+                    npcLoot.RemoveWhere(rule => true);
+                    break;
+
+                case NPCID.BrainofCthulhu:
+                    if (!Main.expertMode && !Main.masterMode)
+                    {
+                        npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.CrimtaneOre);
+                        npcLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 69, 69));
+                        npcLoot.Add(ItemDropRule.Common(ItemID.CrimtaneOre, 1, 69, 69));
+                    }
+                    break;
+
+                default:
+                    break;
             }
-            if (!Main.expertMode && !Main.masterMode && npc.type == NPCID.BrainofCthulhu) 
+        }
+    }
+    public class EvilBossBagsRework : GlobalItem 
+    {
+        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
+        {
+            if (!ModContent.GetInstance<Config>().EvilBossMaterialsReworkON) { return; }
+            //
+            if (item.type == ItemID.BrainOfCthulhuBossBag) 
             {
-                npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.CrimtaneOre);
-                npcLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 69, 69));
-                npcLoot.Add(ItemDropRule.Common(ItemID.CrimtaneOre, 1, 69, 69));
+                if (Main.expertMode)
+                {
+                    itemLoot.RemoveWhere(
+                        rule => rule is CommonDrop drop && (drop.itemId == ItemID.CrimtaneOre || drop.itemId == ItemID.TissueSample)
+                    );
+                    itemLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 69, 69));
+                    itemLoot.Add(ItemDropRule.Common(ItemID.CrimtaneOre, 1, 69, 69));
+                }
+                else
+                {
+                    itemLoot.RemoveWhere(
+                        rule => rule is CommonDrop drop && (drop.itemId == ItemID.CrimtaneOre || drop.itemId == ItemID.TissueSample)
+                    );
+                    itemLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 69, 69));
+                    itemLoot.Add(ItemDropRule.Common(ItemID.CrimtaneOre, 1, 69, 69));
+                }       
             }
         }
     }

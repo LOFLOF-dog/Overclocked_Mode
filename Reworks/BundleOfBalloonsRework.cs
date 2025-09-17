@@ -12,11 +12,15 @@ namespace Overclocked.Reworks
     {
         public override void AddRecipeGroups()
         {
+            if (!ModContent.GetInstance<Config>().EvilOresReworkON) { return; }
+            //
             RecipeGroup EvilBossMaterial = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.ShadowScale)}", ItemID.ShadowScale, ItemID.TissueSample);
             RecipeGroup.RegisterGroup(nameof(ItemID.ShadowScale), EvilBossMaterial);
         }
         public override void AddRecipes()
         {
+            if (!ModContent.GetInstance<Config>().EvilOresReworkON) { return; }
+            //
             // Removing Recipes.
             List<Recipe> rec = Main.recipe.ToList();
             //
