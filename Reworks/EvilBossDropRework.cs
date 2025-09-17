@@ -1,7 +1,11 @@
-﻿using Terraria;
+﻿using MonoMod.Logs;
+using System;
+using Terraria;
+using Terraria.Enums;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Utilities;
 
 namespace Overclocked.Reworks
 {
@@ -11,8 +15,13 @@ namespace Overclocked.Reworks
         {
             if (npc.type == NPCID.Creeper)
             {
-                Main.NewText("GOWNO");
-                npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.TissueSample); //Add(ItemDropRule.Common(ModContent.ItemType<MyModItem>(), 10));
+                npcLoot.RemoveWhere(rule => true);
+            }
+            if (!Main.expertMode && !Main.masterMode && npc.type == NPCID.BrainofCthulhu) 
+            {
+                npcLoot.RemoveWhere(rule => rule is CommonDrop drop && drop.itemId == ItemID.CrimtaneOre);
+                npcLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 1, 69, 69));
+                npcLoot.Add(ItemDropRule.Common(ItemID.CrimtaneOre, 1, 69, 69));
             }
         }
     }
