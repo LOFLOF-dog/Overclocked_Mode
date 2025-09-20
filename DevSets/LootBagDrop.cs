@@ -1,6 +1,4 @@
-﻿using LOFLOFdevSet;
-using System;
-using System.Linq;
+﻿using System.Linq;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -26,16 +24,16 @@ namespace Overclocked.DevSets
                         var original = oneFromOptionsDrop.dropIds.ToList();
                         if (Main.rand.NextFloat() > 5)
                         {
-                            original.Add(ModContent.ItemType<LOFLOFwig>());
-                            original.Add(ModContent.ItemType<LOFLOFshirt>());
-                            original.Add(ModContent.ItemType<LOFLOFboots>());
+                            original.Add(ModContent.ItemType<LOFLOF.LOFLOFwig>());
+                            original.Add(ModContent.ItemType<LOFLOF.LOFLOFshirt>());
+                            original.Add(ModContent.ItemType<LOFLOF.LOFLOFboots>());
                             original.Add(ItemID.DogTail);
                         }
                         if (Main.rand.NextFloat() > 5)
                         {
-                            original.Add(ModContent.ItemType<LOFLOFwig>());
-                            original.Add(ModContent.ItemType<LOFLOFshirt>());
-                            original.Add(ModContent.ItemType<LOFLOFboots>());
+                            original.Add(ModContent.ItemType<LOFLOF.LOFLOFwig>());
+                            original.Add(ModContent.ItemType<LOFLOF.LOFLOFshirt>());
+                            original.Add(ModContent.ItemType<LOFLOF.LOFLOFboots>());
                             original.Add(ItemID.DogTail);
                         }
                         oneFromOptionsDrop.dropIds = original.ToArray();

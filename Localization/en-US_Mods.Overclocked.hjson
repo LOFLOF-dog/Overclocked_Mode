@@ -350,18 +350,18 @@ Configs: {
 		}
 
 		MechsReworkON: {
-			Tooltip: ""
 			Label: Mechs Rework O N
+			Tooltip: ""
 		}
 
 		BundleReworkON: {
-			Tooltip: ""
 			Label: Bundle Rework O N
+			Tooltip: ""
 		}
 
 		EvilBossMaterialsReworkON: {
-			Tooltip: ""
 			Label: Evil Boss Materials Rework O N
+			Tooltip: ""
 		}
 
 		EvilOresReworkON: {
@@ -391,21 +391,6 @@ Configs: {
 
 		BossRegenHealPerSecond: {
 			Label: Boss Regen Heal Per Second
-			Tooltip: ""
-		}
-
-		EvilBossMaterialsReworkON: {
-			Label: Evil Boss Materials Rework O N
-			Tooltip: ""
-		}
-
-		BundleReworkON: {
-			Label: Bundle Rework O N
-			Tooltip: ""
-		}
-
-		MechsReworkON: {
-			Label: Mechs Rework O N
 			Tooltip: ""
 		}
 
