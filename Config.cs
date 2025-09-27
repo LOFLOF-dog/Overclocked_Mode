@@ -9,9 +9,16 @@ namespace Overclocked
     {
         // TODO: add Astolfoless textures for accs
         public override ConfigScope Mode => ConfigScope.ServerSide;
+
+        #region
+        [Header("General")]
         public bool ShowHitNumberAfterFight;
         public bool ShowHitNumber;
         public bool ShowHitNumberAlways;
+        
+        public bool ForceGetGoodWorld;
+        public bool RemoveGetGoodWorld;
+        #endregion
 
         #region Reworks
         [Header("Reworks")]

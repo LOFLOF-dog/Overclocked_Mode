@@ -15,7 +15,7 @@ namespace Overclocked.Changes
                 }
                 else 
                 {
-                    if (Main.expertMode) 
+                    if (Main.expertMode && !Main.masterMode) 
                     { Player.AddBuff(ModContent.BuffType<BlockedRegenDebuff>(), ModContent.GetInstance<Config>().RegenBlockedTime * 30); }
                     
                     if (Main.masterMode) 

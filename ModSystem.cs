@@ -20,6 +20,17 @@ namespace Overclocked
             }
             return false;
         }
+        public override void OnWorldLoad()
+        {
+            if (ModContent.GetInstance<Config>().ForceGetGoodWorld)
+            {
+                Main.getGoodWorld = true;
+            }
+            if (ModContent.GetInstance<Config>().RemoveGetGoodWorld)
+            {
+                Main.getGoodWorld = false;
+            }
+        }
         public override void PostDrawInterface(SpriteBatch spriteBatch)
         {
             if (ModContent.GetInstance<Config>().DmgComboShow && ModContent.GetInstance<Config>().DmgComboON)

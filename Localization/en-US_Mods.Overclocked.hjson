@@ -19,6 +19,7 @@ Configs: {
 			BossRegen: Boss Regen Header
 			Reworks: Reworks Header
 			DmgCombo: Dmg Combo Header
+			General: General Header
 		}
 
 		BossHpMultiplierON: {
@@ -447,6 +448,16 @@ Configs: {
 		BossRegenHealActivationTime: {
 			Tooltip: ""
 			Label: Boss Regen Heal Activation Time
+		}
+
+		ForceGetGoodWorld: {
+			Label: Force Get Good World
+			Tooltip: ""
+		}
+
+		RemoveGetGoodWorld: {
+			Label: Remove Get Good World
+			Tooltip: ""
 		}
 	}
 }
