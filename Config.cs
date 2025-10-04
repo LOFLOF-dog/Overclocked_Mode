@@ -20,6 +20,23 @@ namespace Overclocked
         public bool RemoveGetGoodWorld;
         #endregion
 
+        #region
+        [Header("TimeSpeedMultiplier")]
+
+        [DefaultValue(false)]
+        public bool TimeSpeedMultipierON;
+
+        [DefaultValue(false)]
+        public bool TimeSpeedMultipierAlways;
+
+        [DefaultValue(true)]
+        public bool SameAsBossHpMulti;
+
+        [DefaultValue(100)]
+        [Range(1, 10000)]
+        public int TimeSpeedMultiplier;
+        #endregion
+
         #region Reworks
         [Header("Reworks")]
 

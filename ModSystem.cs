@@ -2,12 +2,17 @@
 using Microsoft.Xna.Framework.Graphics;
 using Overclocked.Changes;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Overclocked
 {
     public class MyModSystem : ModSystem
     {
+        /// <summary>
+        /// Returns true when there's a boss npc active
+        /// </summary>
+        /// <returns></returns>
         public bool IsBossAlive()
         {
             // Check if any NPCs currently active are bosses
@@ -50,6 +55,41 @@ namespace Overclocked
                 Utils.DrawBorderString(spriteBatch, text, screenPos, textColor);
             }
         }
+        public override void ModifyTimeRate(ref double timeRate, ref double tileUpdateRate, ref double eventUpdateRate)
+        {
+            float BossHpMultiplier = ModContent.GetInstance<Config>().BossHpMultiplier;
+            float TimeSpeedMultiplier = ModContent.GetInstance<Config>().TimeSpeedMultiplier;
+            //WARNING: the bigger multiplier is, the slower the time passes and vice versa
+            //when it's below 100, time will pass faster than normally and vice versa
+            if (IsBossAlive() && ModContent.GetInstance<Config>().TimeSpeedMultipierON || ModContent.GetInstance<Config>().TimeSpeedMultipierAlways && ModContent.GetInstance<Config>().TimeSpeedMultipierON)
+            {
+                if (ModContent.GetInstance<Config>().SameAsBossHpMulti)
+                {
+                    timeRate = 1 / (BossHpMultiplier / 100);
+                }
+                else
+                {
+                    timeRate = 1 / (TimeSpeedMultiplier / 100);
+                }
+            }
+        }
+        /*public override void PostUpdateWorld()
+        {
+            if (Main.netMode == NetmodeID.Server && IsBossAlive() && ModContent.GetInstance<Config>().TimeSpeedMultipierON)
+            {
+                Main.dayRate += 1;
+                if (ModContent.GetInstance<Config>().SameAsBossHpMulti)
+                {
+                    // Reduce time progression by scaling it down
+                    Main.time += ModContent.GetInstance<Config>().BossHpMultiplier / 100 - 1;
+                }
+                else
+                {
+                    // Reduce time progression by scaling it down
+                    Main.time += ModContent.GetInstance<Config>().TimeSpeedMultiplier / 100 - 1;
+                }
+            }
+        }*/
     }
     public class TakenHitsCount : ModPlayer
     {

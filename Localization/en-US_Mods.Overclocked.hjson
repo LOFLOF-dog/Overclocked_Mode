@@ -20,6 +20,7 @@ Configs: {
 			Reworks: Reworks Header
 			DmgCombo: Dmg Combo Header
 			General: General Header
+			TimeSpeedMultiplier: Time Speed Multiplier Header
 		}
 
 		BossHpMultiplierON: {
@@ -457,6 +458,26 @@ Configs: {
 
 		RemoveGetGoodWorld: {
 			Label: Remove Get Good World
+			Tooltip: ""
+		}
+
+		TimeSpeedMultipierON: {
+			Label: Time Speed Multipier O N
+			Tooltip: ""
+		}
+
+		SameAsBossHpMulti: {
+			Label: Same As Boss Hp Multi
+			Tooltip: ""
+		}
+
+		TimeSpeedMultiplier: {
+			Label: Time Speed Multiplier
+			Tooltip: ""
+		}
+
+		TimeSpeedMultipierAlways: {
+			Label: Time Speed Multipier Always
 			Tooltip: ""
 		}
 	}
