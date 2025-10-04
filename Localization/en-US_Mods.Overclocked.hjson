@@ -20,6 +20,7 @@ Configs: {
 			Reworks: Reworks Header
 			DmgCombo: Dmg Combo Header
 			General: General Header
+			TimeSpeedMultiplier: Time Speed Multiplier Header
 		}
 
 		BossHpMultiplierON: {
@@ -459,6 +460,36 @@ Configs: {
 			Label: Remove Get Good World
 			Tooltip: ""
 		}
+
+		TimeSpeedMultipierON: {
+			Label: Time Speed Multipier O N
+			Tooltip: ""
+		}
+
+		SameAsBossHpMulti: {
+			Label: Same As Boss Hp Multi
+			Tooltip: ""
+		}
+
+		TimeSpeedMultiplier: {
+			Label: Time Speed Multiplier
+			Tooltip: ""
+		}
+
+		TimeSpeedMultipierAlways: {
+			Label: Time Speed Multipier Always
+			Tooltip: ""
+		}
+
+		DmgComboOffsetY: {
+			Tooltip: ""
+			Label: Dmg Combo Offset Y
+		}
+
+		DmgComboOffsetX: {
+			Tooltip: ""
+			Label: Dmg Combo Offset X
+		}
 	}
 }
 
@@ -530,6 +561,21 @@ Items: {
 	LOFLOFboots: {
 		Tooltip: ""
 		DisplayName: L O F L O Fboots
+	}
+
+	Notalfowig: {
+		Tooltip: ""
+		DisplayName: Notalfowig
+	}
+
+	Notalfoshirt: {
+		Tooltip: ""
+		DisplayName: Notalfoshirt
+	}
+
+	Notalfoboots: {
+		Tooltip: ""
+		DisplayName: Notalfoboots
 	}
 }
 

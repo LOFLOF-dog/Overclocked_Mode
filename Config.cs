@@ -10,7 +10,7 @@ namespace Overclocked
         // TODO: add Astolfoless textures for accs
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        #region
+        #region General
         [Header("General")]
         public bool ShowHitNumberAfterFight;
         public bool ShowHitNumber;
@@ -18,6 +18,23 @@ namespace Overclocked
         
         public bool ForceGetGoodWorld;
         public bool RemoveGetGoodWorld;
+        #endregion
+
+        #region Time Speed Multiplier
+        [Header("TimeSpeedMultiplier")]
+
+        [DefaultValue(false)]
+        public bool TimeSpeedMultipierON;
+
+        [DefaultValue(false)]
+        public bool TimeSpeedMultipierAlways;
+
+        [DefaultValue(true)]
+        public bool SameAsBossHpMulti;
+
+        [DefaultValue(100)]
+        [Range(1, 10000)]
+        public int TimeSpeedMultiplier;
         #endregion
 
         #region Reworks
@@ -284,11 +301,18 @@ namespace Overclocked
         [ReloadRequired]
         public int DmgComboCapUp;
 
-
         [DefaultValue(100)]
         [Range(0, 10000)]
         [ReloadRequired]
         public int DmgComboCapDown;
+
+        [DefaultValue(-15)]
+        [Range(-10000, 10000)]
+        public int DmgComboOffsetX;
+
+        [DefaultValue(30)]
+        [Range(-10000, 10000)]
+        public int DmgComboOffsetY;
         #endregion
 
         #region Taken Hit Limit
@@ -318,31 +342,5 @@ namespace Overclocked
         [Range(1, 10000)]
         public int TakenHitScal;
         #endregion
-
-        #region Boss regeneration
-        [Header("BossRegen")]
-
-        [DefaultValue(true)]
-        public bool BossRegenON;
-
-        [DefaultValue(1)]
-        [Range(1, 100)]
-        public int BossRegenHealPercent;
-
-        [DefaultValue(10)]
-        [Range(1, 3600)]
-        public int BossRegenNoHitActivationTime;
-
-        [DefaultValue(600)]
-        [Range(1, 216000)]
-        public int BossRegenHealActivationTime;
-        #endregion
-
-        public override void OnChanged()
-        {
-            BossRegen.HealPercent = BossRegenHealPercent;
-            BossRegen.NoHitActivationTime = BossRegenNoHitActivationTime;
-            BossRegen.HealActivationTime = BossRegenHealActivationTime;
-        }
     }
 }
